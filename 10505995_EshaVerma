@@ -1,0 +1,40 @@
+Q.1) Print the maximum occuring character in string.
+
+s = 'samples worddd'
+counts = {}
+# creating hash map for character counts
+for i in s:
+    if i in counts.keys():
+        counts[i] += 1
+    else:
+        counts[i] = 1
+        
+max_count = 0
+
+ans = ''
+# maximum occuring char
+for i in counts:
+    if counts[i] > max_count:
+        max_count = counts[i]
+        ans = i
+
+print(ans)
+
+
+Q.2) Print the first non-repeating character in the string.
+
+s = 'samples worddd'
+counts = {}
+# creating hash map for character counts
+for i in s:
+    if i in counts.keys():
+        counts[i] += 1
+    else:
+        counts[i] = 1
+#non repeating character
+for i in counts:
+    if counts[i] == 1:
+        print(i)
+        break
+
+
